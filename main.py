@@ -8,6 +8,7 @@ from output_parsers import review_intel_parser
 # Loading environment variables from .env file
 load_dotenv()
 
+
 # Review template with prompts on inputs requesting answer from OpenAI.
 # Creates string along with using correct formatting within other class
 def product_review(review: str) -> str:

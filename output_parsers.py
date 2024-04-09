@@ -24,3 +24,29 @@ class ReviewIntel(BaseModel):
 review_intel_parser: PydanticOutputParser = PydanticOutputParser(
     pydantic_object=ReviewIntel
 )
+
+
+
+
+
+
+
+
+
+
+
+class ReviewFacts(BaseModel):
+    name: str = Field(description="Name")
+    true_facts: str = Field(description="Facts that state the truth")
+
+    def to_dict(self):
+        return {
+            "name": self.name,
+            "true_facts": self.true_facts,
+
+        }
+
+
+review_facts_parser: PydanticOutputParser = PydanticOutputParser(
+    pydantic_object=ReviewFacts
+)
